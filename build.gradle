@@ -23,8 +23,3 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
-task generateVersionTxt {
-    doLast {
-        file("./version.txt").text = "test_version"
-    }
-}
