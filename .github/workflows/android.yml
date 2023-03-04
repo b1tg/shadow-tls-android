@@ -25,9 +25,9 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
     - name: Build Debug APK
-      run: ./gradlew assembleDebug & ls /home/runner/work/shadow-tls-android/shadow-tls-android
+      run: ./gradlew assembleDebug && ls /home/runner/work/shadow-tls-android/shadow-tls-android/build  && tree /home/runner/work/shadow-tls-android/shadow-tls-android/build
     - name: Upload App APK
       uses: actions/upload-artifact@v1
       with:
         name: app-debug
-        path: /home/runner/work/shadow-tls-android/shadow-tls-android
+        path: /home/runner/work/shadow-tls-android/shadow-tls-android/build/outputs/apk/debug/app-debug.apk
