@@ -25,6 +25,6 @@ task clean(type: Delete) {
 
 task generateVersionTxt {
     doLast {
-        file("./version.txt").text = android.defaultConfig.versionName
+        file("./version.txt").text = "test_version"
     }
 }
